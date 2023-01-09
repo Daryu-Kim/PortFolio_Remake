@@ -7,15 +7,27 @@ const header = document.getElementById('header');
 
 // Content Declare
 var typingBool = false;
-var typingIdx = 0;
-var typingText = "I'm Full-Stack && Android Developer."
+var typingIdx1 = 0;
+var typingIdx2 = 0;
+var typingIdx3 = 0;
+var typingText1 = "한번을 하더라도 완벽하게,";
+var typingText2 = "문제 해결 및 유지 보수를 위한";
+var typingText3 = "공부를 끊임없이 하는 점이 저의 장점입니다!";
 
 wrapper_menu_label.addEventListener('click', WrapperMenuCheckbox);
 wrapper_overlay.addEventListener('click', WrapperOverlayClick);
 window.addEventListener("resize", ResponsiveMenu);
 
 ResponsiveMenu();
-ContentTypingText();
+ContentTypingText1();
+setTimeout(
+    function () {
+        ContentTypingText2();
+    }, 1475);
+setTimeout(
+    function () {
+        ContentTypingText3();
+    }, 3350);
 
 function WrapperMenuCheckbox() {
     if (wrapper_menu_checkbox.checked === true) {
@@ -47,10 +59,10 @@ function WrapperOverlayOFF() {
         {
             easing: "ease-in-out"
         }
-        
+
     ], 400);
     setTimeout(
-        function() {
+        function () {
             wrapper_overlay.style.display = 'none';
         }, 200);
 }
@@ -70,7 +82,7 @@ function WrapperOverlayON() {
         {
             easing: "ease-in-out"
         }
-        
+
     ], 400);
 }
 
@@ -84,18 +96,52 @@ function ResponsiveMenu() {
     }
 }
 
-function ContentTypingText() {
-    typingText = typingText.split("");
+function ContentTypingText1() {
+    typingText1 = typingText1.split("");
 
     if (typingBool == false) {
-        var tyInt = setInterval(ContentTypingTextAnim, 100)
+        var tyInt = setInterval(ContentTypingTextAnim1, 100)
     }
 }
 
-function ContentTypingTextAnim() {
-    if (typingIdx < typingText.length) {
-        document.getElementById('content-home-typing').append(typingText[typingIdx]);
-        typingIdx++;
+function ContentTypingText2() {
+    typingText2 = typingText2.split("");
+
+    if (typingBool == false) {
+        var tyInt = setInterval(ContentTypingTextAnim2, 100)
+    }
+}
+
+function ContentTypingText3() {
+    typingText3 = typingText3.split("");
+
+    if (typingBool == false) {
+        var tyInt = setInterval(ContentTypingTextAnim3, 100)
+    }
+}
+
+function ContentTypingTextAnim1() {
+    if (typingIdx1 < typingText1.length) {
+        document.getElementById('content-home-typing1').append(typingText1[typingIdx1]);
+        typingIdx1++;
+    } else {
+        clearInterval(tyInt);
+    }
+}
+
+function ContentTypingTextAnim2() {
+    if (typingIdx2 < typingText2.length) {
+        document.getElementById('content-home-typing2').append(typingText2[typingIdx2]);
+        typingIdx2++;
+    } else {
+        clearInterval(tyInt);
+    }
+}
+
+function ContentTypingTextAnim3() {
+    if (typingIdx3 < typingText3.length) {
+        document.getElementById('content-home-typing3').append(typingText3[typingIdx3]);
+        typingIdx3++;
     } else {
         clearInterval(tyInt);
     }
