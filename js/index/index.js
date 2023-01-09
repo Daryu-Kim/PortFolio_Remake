@@ -1,6 +1,7 @@
 const wrapper_menu_checkbox = document.getElementById('wrapper-menu-checkbox');
 const wrapper_menu_label = document.getElementById('wrapper-menu-label');
 const wrapper_overlay = document.getElementById('wrapper-overlay');
+const wrapper_pageup = document.querySelector(".wrapper-pageup");
 
 // Header Declare
 const header = document.getElementById('header');
@@ -17,6 +18,10 @@ var typingText3 = "공부를 끊임없이 하는 점이 저의 장점입니다!"
 wrapper_menu_label.addEventListener('click', WrapperMenuCheckbox);
 wrapper_overlay.addEventListener('click', WrapperOverlayClick);
 window.addEventListener("resize", ResponsiveMenu);
+
+wrapper_pageup.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+window.onscroll = () => window.scrollY > 500 ? wrapper_pageup.getElementsByClassName.opacity = 1 :
+wrapper_pageup.getElementsByClassName.opacity = 0;
 
 ResponsiveMenu();
 ContentTypingText1();

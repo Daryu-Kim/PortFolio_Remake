@@ -48,6 +48,26 @@ p, i {
     z-index: 1000;
 }
 
+.wrapper-pageup {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 100;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.wrapper-pageup i {
+    font-size: 24px;
+    color: white;
+}
+
 .wrapper-menu-checkbox {
     display: none;
 }
