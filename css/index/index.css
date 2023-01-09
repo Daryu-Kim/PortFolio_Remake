@@ -263,7 +263,7 @@ p, i {
     justify-content: center;
     z-index: 0;
     /* 문제점 */
-    background: url('/images/index/content/home/content-home-bg.jfif');
+    background-image: url('/images/index/content/home/content-home-bg.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
