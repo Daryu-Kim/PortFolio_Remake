@@ -8,7 +8,7 @@ const header = document.getElementById('header');
 // Content Declare
 var typingBool = false;
 var typingIdx = 0;
-var typingText = "Hi, I'm a Developer!"
+var typingText = "I'm Full-Stack && Android Developer."
 
 wrapper_menu_label.addEventListener('click', WrapperMenuCheckbox);
 wrapper_overlay.addEventListener('click', WrapperOverlayClick);
