@@ -362,6 +362,41 @@ p, i {
     transform: scale(1.1);
 }
 
+.content-contact-box {
+    box-shadow: 0 0 16px #333;
+    padding: 28px;
+    margin-top: 28px;
+}
+
+.content-contact-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.content-contact-item:first-child {
+    padding-top: 0;
+}
+
+.content-contact-item:last-child {
+    padding-bottom: 0;
+}
+
+.content-contact-icon-box {
+    width: 48px;
+    height: 48px;
+    background-color: #f5f0ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+}
+
+.content-contact-icon {
+    font-size: 20px;
+}
+
 @media screen and (max-width: 767px) {
     .content-home-title {
         font-size: 8vw;
@@ -419,6 +454,15 @@ p, i {
         margin-top: 28px;
         margin-bottom: 16px;
     }
+
+    .content-contact-item-title {
+        font-size: 20px;
+        margin-bottom: 4px;
+    }
+    
+    .content-contact-item-text {
+        font-size: 15px;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 959px) {
@@ -470,6 +514,32 @@ p, i {
 
     .content-des {
         font-size: 24px;
+    }
+
+    .content-skill-title {
+        font-size: 20px;
+        margin-top: 28px;
+        margin-bottom: 18px;
+    }
+
+    .content-skill-li img {
+        height: 32px;
+    }
+
+    .content-contact-box {
+        justify-content: center;
+        width: 560px;
+        margin: auto;
+        margin-top: 28px;
+    }
+
+    .content-contact-item-title {
+        font-size: 20px;
+        margin-bottom: 4px;
+    }
+    
+    .content-contact-item-text {
+        font-size: 15px;
     }
 }
 
@@ -534,6 +604,29 @@ p, i {
 
     .content-des {
         font-size: 20px;
+    }
+
+    .content-skill-title {
+        font-size: 18px;
+        margin-top: 28px;
+        margin-bottom: 16px;
+    }
+
+    .content-contact-item-title {
+        font-size: 20px;
+        margin-bottom: 4px;
+    }
+    
+    .content-contact-item-text {
+        font-size: 15px;
+    }
+
+    .content-contact-box {
+        justify-content: center;
+        width: 70%;
+        max-width: 840px;
+        margin: auto;
+        margin-top: 28px;
     }
 }
 
