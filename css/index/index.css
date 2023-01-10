@@ -257,10 +257,21 @@ p, i {
 
 .content > div {
     width: 100%;
-    height: 100%;
+    padding: 36px;
+}
+
+.content-title {
+    font-size: 32px;
+}
+
+.content-hr {
+    width: 48px;
+    border-color: #333;
+    margin: 8px 0;
 }
 
 .content-home {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -275,8 +286,16 @@ p, i {
     padding: 36px;
 }
 
-.content-aboutme {
-    background-color: aqua;
+.content-aboutme, .content-resume {
+    background-color: #fff;
+}
+
+.content-skill, .content-blank {
+    background-color: #f5f0ff;
+}
+
+.content-blank {
+    height: 128px;
 }
 
 .content-home * {
@@ -309,7 +328,38 @@ p, i {
 
 #content-home-typing3 {
     animation: cursor .4s infinite;
+}
 
+.content-aboutme-profile {
+    display: flex;
+}
+
+.content-aboutme-profile-box {
+    margin-top: 24px;
+}
+
+.content-aboutme-profile-description-li {
+    display: flex;
+    align-items: center;
+}
+
+.content-aboutme-profile-description-li:last-child {
+    margin-bottom: 0;
+}
+
+.content-skill-li {
+    display: flex;
+    align-items: center;
+    margin: 8px;
+    margin-left: 24px;
+}
+
+.content-skill-li img {
+    margin-left: 8px;
+}
+
+.content-skill-li img:hover {
+    transform: scale(1.1);
 }
 
 @media screen and (max-width: 767px) {
@@ -326,6 +376,49 @@ p, i {
         font-size: 4vw;
         line-height: 6vw;
     }
+
+    .content-aboutme-profile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .content-aboutme-profile-img {
+        width: 100%;
+        max-width: 480px;
+        margin-top: 52px;
+    }
+
+    .content-aboutme-profile-name {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    
+    .content-aboutme-profile-description {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .content-aboutme-profile-description-li {
+        margin: 24px 0;
+    }
+
+    .content-aboutme-profile-description-li * {
+        font-size: 16px;
+    }
+
+    .content-aboutme-profile-description-li b {
+        margin-left: 8px;
+    }
+
+    .content-des {
+        font-size: 20px;
+    }
+
+    .content-skill-title {
+        font-size: 18px;
+        margin-top: 28px;
+        margin-bottom: 16px;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 959px) {
@@ -341,6 +434,42 @@ p, i {
     .content-home-typing {
         font-size: 3vw;
         line-height: 4.5vw;
+    }
+
+    .content-aboutme-profile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .content-aboutme-profile-img {
+        width: 480px;
+        margin-top: 52px;
+    }
+
+    .content-aboutme-profile-name {
+        font-size: 28px;
+        margin-bottom: 14px;
+    }
+    
+    .content-aboutme-profile-description {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .content-aboutme-profile-description-li {
+        margin: 30px 0;
+    }
+
+    .content-aboutme-profile-description-li * {
+        font-size: 20px;
+    }
+
+    .content-aboutme-profile-description-li b {
+        margin-left: 10px;
+    }
+
+    .content-des {
+        font-size: 24px;
     }
 }
 
@@ -365,6 +494,46 @@ p, i {
     .content-home-typing {
         font-size: 2vw;
         line-height: 3vw;
+    }
+
+    .content-aboutme-profile {
+        align-items: flex-start;
+        margin-top: 52px;
+    }
+
+    .content-aboutme-profile-img {
+        width: 30%;
+        margin-right: 24px;
+    }
+
+    .content-aboutme-profile-box {
+        margin-top: 0;
+    }
+
+    .content-aboutme-profile-name {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    
+    .content-aboutme-profile-description {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .content-aboutme-profile-description-li {
+        margin: 24px 0;
+    }
+
+    .content-aboutme-profile-description-li * {
+        font-size: 16px;
+    }
+
+    .content-aboutme-profile-description-li b {
+        margin-left: 8px;
+    }
+
+    .content-des {
+        font-size: 20px;
     }
 }
 

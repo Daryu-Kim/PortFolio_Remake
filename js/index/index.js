@@ -101,6 +101,10 @@ function ResponsiveMenu() {
     }
 }
 
+function ContentScroll() {
+    window.scrollTo(document.getElementById('content-aboutme').offsetLeft, document.getElementById('content-aboutme').offsetTop);
+}
+
 function ContentTypingText1() {
     document.getElementById('content-home-typing1').style.display = 'block';
     typingText1 = typingText1.split("");
