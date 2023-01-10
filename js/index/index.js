@@ -102,6 +102,7 @@ function ResponsiveMenu() {
 }
 
 function ContentTypingText1() {
+    document.getElementById('content-home-typing1').style.display = 'block';
     typingText1 = typingText1.split("");
 
     if (typingBool == false) {
@@ -110,6 +111,7 @@ function ContentTypingText1() {
 }
 
 function ContentTypingText2() {
+    document.getElementById('content-home-typing2').style.display = 'block';
     typingText2 = typingText2.split("");
 
     if (typingBool == false) {
@@ -118,6 +120,7 @@ function ContentTypingText2() {
 }
 
 function ContentTypingText3() {
+    document.getElementById('content-home-typing3').style.display = 'block';
     typingText3 = typingText3.split("");
 
     if (typingBool == false) {
