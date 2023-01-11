@@ -1,11 +1,4 @@
 @font-face {
-    font-family: 'GmarketSansMedium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
@@ -32,12 +25,12 @@ body {
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 24px;
     color: #220065;
 }
 
 p, i {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .scroll-lock {
@@ -258,11 +251,11 @@ p, i {
 }
 
 .header-lastmenu-copyright {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .header-lastmenu-update {
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 4px;
 }
 
@@ -277,7 +270,7 @@ p, i {
 }
 
 .content-title {
-    font-size: 32px;
+    font-size: 36px;
     color: #220065;
 }
 
@@ -365,6 +358,120 @@ p, i {
     margin-bottom: 0;
 }
 
+.content-resume-box-edu, .content-resume-box-ext, .content-resume-box-career {
+    position: relative;
+}
+
+.content-resume-box-edu {
+    margin-top: 28px;
+}
+
+.content-resume-box-ext, .content-resume-box-career {
+    margin-top: 36px;
+}
+
+.content-resume-box-div {
+    margin-top: 16px;
+}
+
+#content-resume-title {
+    font-size: 24px;
+}
+
+.title-break {
+    word-break: break-all;
+}
+
+.content-resume-circle {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #220065;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: -4px;
+}
+
+.content-resume-title {
+    font-size: 20px;
+}
+
+.content-resume-content {
+    font-size: 16px;
+    color: #928f97;
+}
+
+.edu-circle1 {
+    top: 45px;
+}
+
+.edu-circle2 {
+    top: 174px;
+}
+
+.career-circle1 {
+    top: 45px;
+}
+
+.career-circle2 {
+    top: 174px;
+}
+
+.career-circle3 {
+    top: 304px;
+}
+
+.ext-circle1 {
+    top: 45px;
+}
+
+.ext-circle2 {
+    top: 174px;
+}
+
+.ext-circle3 {
+    top: 304px;
+}
+
+.ext-circle4 {
+    top: 454px;
+}
+
+.ext-circle5 {
+    top: 604px;
+}
+
+.ext-circle6 {
+    top: 776px;
+}
+
+.ext-circle7 {
+    top: 944px;
+}
+
+.ext-circle8 {
+    top: 1094px;
+}
+
+.content-resume-div {
+    border-left: 3px solid #220065;
+    padding-left: 36px;
+    margin-left: 6.5px;
+}
+
+.div-margin {
+    padding-top: 36px;
+}
+
+.content-resume-since {
+    background-color: #f5f0ff;
+    width: fit-content;
+    padding: 8px 12px;
+    font-weight: 600;
+    margin: 8px 0;
+    font-size: 16px;
+}
+
 .content-skill-li {
     display: flex;
     align-items: center;
@@ -402,10 +509,13 @@ p, i {
 
 .content-contact-item-title {
     color: black;
+    font-size: 24px;
+    margin-bottom: 4px;
 }
 
 .content-contact-item-text {
     color: black;
+    font-size: 18px;
 }
 
 .content-contact-item-text:hover {
@@ -465,12 +575,12 @@ p, i {
     }
 
     .content-aboutme-profile-name {
-        font-size: 24px;
+        font-size: 28px;
         margin-bottom: 12px;
     }
     
     .content-aboutme-profile-description {
-        font-size: 16px;
+        font-size: 20px;
         margin-bottom: 8px;
     }
 
@@ -479,7 +589,7 @@ p, i {
     }
 
     .content-aboutme-profile-description-li * {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .content-aboutme-profile-description-li b {
@@ -487,22 +597,13 @@ p, i {
     }
 
     .content-des {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .content-skill-title {
-        font-size: 18px;
+        font-size: 20px;
         margin-top: 28px;
         margin-bottom: 16px;
-    }
-
-    .content-contact-item-title {
-        font-size: 20px;
-        margin-bottom: 4px;
-    }
-    
-    .content-contact-item-text {
-        font-size: 15px;
     }
 }
 
@@ -536,12 +637,12 @@ p, i {
     }
 
     .content-aboutme-profile-name {
-        font-size: 28px;
+        font-size: 32px;
         margin-bottom: 14px;
     }
     
     .content-aboutme-profile-description {
-        font-size: 20px;
+        font-size: 24px;
         margin-bottom: 10px;
     }
 
@@ -550,7 +651,7 @@ p, i {
     }
 
     .content-aboutme-profile-description-li * {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .content-aboutme-profile-description-li b {
@@ -558,11 +659,11 @@ p, i {
     }
 
     .content-des {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .content-skill-title {
-        font-size: 20px;
+        font-size: 24px;
         margin-top: 28px;
         margin-bottom: 18px;
     }
@@ -576,15 +677,6 @@ p, i {
         width: 560px;
         margin: auto;
         margin-top: 28px;
-    }
-
-    .content-contact-item-title {
-        font-size: 20px;
-        margin-bottom: 4px;
-    }
-    
-    .content-contact-item-text {
-        font-size: 15px;
     }
 }
 
@@ -618,6 +710,7 @@ p, i {
 
     .content-aboutme-profile-img {
         width: 30%;
+        max-width: 360px;
         margin-right: 24px;
     }
 
@@ -626,12 +719,12 @@ p, i {
     }
 
     .content-aboutme-profile-name {
-        font-size: 24px;
+        font-size: 28px;
         margin-bottom: 12px;
     }
     
     .content-aboutme-profile-description {
-        font-size: 16px;
+        font-size: 20px;
         margin-bottom: 8px;
     }
 
@@ -640,7 +733,7 @@ p, i {
     }
 
     .content-aboutme-profile-description-li * {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .content-aboutme-profile-description-li b {
@@ -648,22 +741,13 @@ p, i {
     }
 
     .content-des {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .content-skill-title {
-        font-size: 18px;
+        font-size: 20px;
         margin-top: 28px;
         margin-bottom: 16px;
-    }
-
-    .content-contact-item-title {
-        font-size: 20px;
-        margin-bottom: 4px;
-    }
-    
-    .content-contact-item-text {
-        font-size: 15px;
     }
 
     .content-contact-box {

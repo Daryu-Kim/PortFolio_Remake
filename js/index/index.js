@@ -6,12 +6,18 @@ const wrapper_pageup = document.querySelector(".wrapper-pageup");
 // Header Declare
 const header = document.getElementById('header');
 const header_menu_home = document.getElementById('header-menu-home');
+const header_menu_aboutme = document.getElementById('header-menu-aboutme');
+const header_menu_resume = document.getElementById('header-menu-resume');
+const header_menu_skill = document.getElementById('header-menu-skill');
+const header_menu_portfolio = document.getElementById('header-menu-portfolio');
+const header_menu_contact = document.getElementById('header-menu-contact');
 
 // Content Declare
 var typingBool = false;
 var typingIdx1 = 0;
 var typingIdx2 = 0;
 var typingIdx3 = 0;
+var tyInt1, tyInt2, tyInt3;
 var typingText1 = "한번을 하더라도 완벽하게,";
 var typingText2 = "문제 해결 및 유지 보수를 위한";
 var typingText3 = "공부를 끊임없이 하는 점이 저의 장점입니다!";
@@ -20,6 +26,11 @@ wrapper_menu_label.addEventListener('click', WrapperMenuCheckbox);
 wrapper_overlay.addEventListener('click', WrapperOverlayClick);
 window.addEventListener("resize", ResponsiveMenu);
 header_menu_home.addEventListener('click', HeaderHome);
+header_menu_aboutme.addEventListener('click', HeaderAboutMe);
+header_menu_resume.addEventListener('click', HeaderResume);
+header_menu_skill.addEventListener('click', HeaderSkill);
+header_menu_portfolio.addEventListener('click', HeaderPortFolio);
+header_menu_contact.addEventListener('click', HeaderContact);
 
 wrapper_pageup.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 window.onscroll = () => window.scrollY > 500 ? wrapper_pageup.getElementsByClassName.opacity = 1 :
@@ -105,12 +116,40 @@ function ResponsiveMenu() {
 
 function HeaderHome() {
     document.getElementById('content-home').scrollIntoView();
+    HeaderClickResponsive();
+}
+
+function HeaderAboutMe() {
+    document.getElementById('content-aboutme').scrollIntoView();
+    HeaderClickResponsive();
+}
+
+function HeaderResume() {
+    document.getElementById('content-resume').scrollIntoView();
+    HeaderClickResponsive();
+}
+
+function HeaderSkill() {
+    document.getElementById('content-skill').scrollIntoView();
+    HeaderClickResponsive();
+}
+
+function HeaderPortFolio() {
+    document.getElementById('content-portfolio').scrollIntoView();
+    HeaderClickResponsive();
+}
+
+function HeaderContact() {
+    document.getElementById('content-contact').scrollIntoView();
+    HeaderClickResponsive();
+}
+
+function HeaderClickResponsive() {
     if (window.innerWidth < 960) {
         WrapperOverlayOFF();
         wrapper_menu_checkbox.checked = false;
         header.style.left = '-300px';
     }
-    
 }
 
 function ContentScroll() {
@@ -122,7 +161,7 @@ function ContentTypingText1() {
     typingText1 = typingText1.split("");
 
     if (typingBool == false) {
-        var tyInt = setInterval(ContentTypingTextAnim1, 100)
+        var tyInt1 = setInterval(ContentTypingTextAnim1, 100)
     }
 }
 
@@ -131,7 +170,7 @@ function ContentTypingText2() {
     typingText2 = typingText2.split("");
 
     if (typingBool == false) {
-        var tyInt = setInterval(ContentTypingTextAnim2, 100)
+        var tyInt2 = setInterval(ContentTypingTextAnim2, 100)
     }
 }
 
@@ -140,7 +179,7 @@ function ContentTypingText3() {
     typingText3 = typingText3.split("");
 
     if (typingBool == false) {
-        var tyInt = setInterval(ContentTypingTextAnim3, 100)
+        var tyInt3 = setInterval(ContentTypingTextAnim3, 100)
     }
 }
 
@@ -149,7 +188,7 @@ function ContentTypingTextAnim1() {
         document.getElementById('content-home-typing1').append(typingText1[typingIdx1]);
         typingIdx1++;
     } else {
-        clearInterval(tyInt);
+        clearInterval(tyInt1);
     }
 }
 
@@ -158,7 +197,7 @@ function ContentTypingTextAnim2() {
         document.getElementById('content-home-typing2').append(typingText2[typingIdx2]);
         typingIdx2++;
     } else {
-        clearInterval(tyInt);
+        clearInterval(tyInt2);
     }
 }
 
@@ -167,6 +206,6 @@ function ContentTypingTextAnim3() {
         document.getElementById('content-home-typing3').append(typingText3[typingIdx3]);
         typingIdx3++;
     } else {
-        clearInterval(tyInt);
+        clearInterval(tyInt3);
     }
 }
