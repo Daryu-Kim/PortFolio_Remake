@@ -5,6 +5,7 @@ const wrapper_pageup = document.querySelector(".wrapper-pageup");
 
 // Header Declare
 const header = document.getElementById('header');
+const header_menu_home = document.getElementById('header-menu-home');
 
 // Content Declare
 var typingBool = false;
@@ -18,6 +19,7 @@ var typingText3 = "공부를 끊임없이 하는 점이 저의 장점입니다!"
 wrapper_menu_label.addEventListener('click', WrapperMenuCheckbox);
 wrapper_overlay.addEventListener('click', WrapperOverlayClick);
 window.addEventListener("resize", ResponsiveMenu);
+header_menu_home.addEventListener('click', HeaderHome);
 
 wrapper_pageup.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 window.onscroll = () => window.scrollY > 500 ? wrapper_pageup.getElementsByClassName.opacity = 1 :
@@ -99,6 +101,16 @@ function ResponsiveMenu() {
     } else {
         header.style.left = '-300px';
     }
+}
+
+function HeaderHome() {
+    document.getElementById('content-home').scrollIntoView();
+    if (window.innerWidth < 960) {
+        WrapperOverlayOFF();
+        wrapper_menu_checkbox.checked = false;
+        header.style.left = '-300px';
+    }
+    
 }
 
 function ContentScroll() {
