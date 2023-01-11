@@ -4,6 +4,7 @@ const wrapper_overlay = document.getElementById('wrapper-overlay');
 const wrapper_pageup = document.querySelector(".wrapper-pageup");
 
 // Header Declare
+var menu_home_clicked, menu_aboutme_clicked, menu_resume_clicked, menu_skill_clicked, menu_portfolio_clicked, menu_contact_clicked;
 const header = document.getElementById('header');
 const header_menu_home = document.getElementById('header-menu-home');
 const header_menu_aboutme = document.getElementById('header-menu-aboutme');
@@ -11,6 +12,9 @@ const header_menu_resume = document.getElementById('header-menu-resume');
 const header_menu_skill = document.getElementById('header-menu-skill');
 const header_menu_portfolio = document.getElementById('header-menu-portfolio');
 const header_menu_contact = document.getElementById('header-menu-contact');
+
+HeaderClickedOFF();
+menu_home_clicked = true;
 
 // Content Declare
 var typingBool = false;
@@ -25,6 +29,8 @@ var typingText3 = "공부를 끊임없이 하는 점이 저의 장점입니다!"
 wrapper_menu_label.addEventListener('click', WrapperMenuCheckbox);
 wrapper_overlay.addEventListener('click', WrapperOverlayClick);
 window.addEventListener("resize", ResponsiveMenu);
+window.body.addEventListener('scroll', ScrollHeaderMenu);
+
 header_menu_home.addEventListener('click', HeaderHome);
 header_menu_aboutme.addEventListener('click', HeaderAboutMe);
 header_menu_resume.addEventListener('click', HeaderResume);
@@ -32,9 +38,54 @@ header_menu_skill.addEventListener('click', HeaderSkill);
 header_menu_portfolio.addEventListener('click', HeaderPortFolio);
 header_menu_contact.addEventListener('click', HeaderContact);
 
+header_menu_home.addEventListener('mouseover', function() {
+    header_menu_home.style.filter = 'none';
+});
+header_menu_aboutme.addEventListener('mouseover', function() {
+    header_menu_aboutme.style.filter = 'none';
+});
+header_menu_resume.addEventListener('mouseover', function() {
+    header_menu_resume.style.filter = 'none';
+});
+header_menu_skill.addEventListener('mouseover', function() {
+    header_menu_skill.style.filter = 'none';
+});
+header_menu_portfolio.addEventListener('mouseover', function() {
+    header_menu_portfolio.style.filter = 'none';
+});
+header_menu_contact.addEventListener('mouseover', function() {
+    header_menu_contact.style.filter = 'none';
+});
+
+header_menu_home.addEventListener('mouseout', function() {
+    if (menu_home_clicked == false)
+        header_menu_home.style.filter = 'opacity(50%) saturate(0%)';
+});
+header_menu_aboutme.addEventListener('mouseout', function() {
+    if (menu_aboutme_clicked == false)
+        header_menu_aboutme.style.filter = 'opacity(50%) saturate(0%)';
+});
+header_menu_resume.addEventListener('mouseout', function() {
+    if (menu_resume_clicked == false)
+        header_menu_resume.style.filter = 'opacity(50%) saturate(0%)';
+});
+header_menu_skill.addEventListener('mouseout', function() {
+    if (menu_skill_clicked == false)
+        header_menu_skill.style.filter = 'opacity(50%) saturate(0%)';
+});
+header_menu_portfolio.addEventListener('mouseout', function() {
+    if (menu_portfolio_clicked == false)
+        header_menu_portfolio.style.filter = 'opacity(50%) saturate(0%)';
+});
+header_menu_contact.addEventListener('mouseout', function() {
+    if (menu_contact_clicked == false)
+        header_menu_contact.style.filter = 'opacity(50%) saturate(0%)';
+});
+
 wrapper_pageup.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 window.onscroll = () => window.scrollY > 500 ? wrapper_pageup.getElementsByClassName.opacity = 1 :
 wrapper_pageup.getElementsByClassName.opacity = 0;
+header_menu_home.style.filter = 'none';
 
 ResponsiveMenu();
 ContentTypingText1();
@@ -114,34 +165,72 @@ function ResponsiveMenu() {
     }
 }
 
+function ScrollHeaderMenu() {
+}
+
+function HeaderClickedOFF() {
+    menu_home_clicked = false;
+    menu_aboutme_clicked = false;
+    menu_resume_clicked = false;
+    menu_skill_clicked = false;
+    menu_portfolio_clicked = false;
+    menu_contact_clicked = false;
+}
+
+function HeaderFilterOFF() {
+    let temp = [header_menu_home, header_menu_aboutme, header_menu_resume, header_menu_skill, header_menu_portfolio, header_menu_contact];
+    HeaderClickedOFF();
+    for (let i = 0; i < temp.length; i++) {
+        temp[i].style.filter = 'opacity(50%) saturate(0%)';
+    }
+} 
+
 function HeaderHome() {
     document.getElementById('content-home').scrollIntoView();
     HeaderClickResponsive();
+    HeaderFilterOFF();
+    header_menu_home.style.filter = 'none';
+    menu_home_clicked = true;
 }
 
 function HeaderAboutMe() {
     document.getElementById('content-aboutme').scrollIntoView();
     HeaderClickResponsive();
+    HeaderFilterOFF();
+    header_menu_aboutme.style.filter = 'none';
+    menu_aboutme_clicked = true;
 }
 
 function HeaderResume() {
     document.getElementById('content-resume').scrollIntoView();
     HeaderClickResponsive();
+    HeaderFilterOFF();
+    header_menu_resume.style.filter = 'none';
+    menu_resume_clicked = true;
 }
 
 function HeaderSkill() {
     document.getElementById('content-skill').scrollIntoView();
     HeaderClickResponsive();
+    HeaderFilterOFF();
+    header_menu_skill.style.filter = 'none';
+    menu_skill_clicked = true;
 }
 
 function HeaderPortFolio() {
     document.getElementById('content-portfolio').scrollIntoView();
     HeaderClickResponsive();
+    HeaderFilterOFF();
+    header_menu_portfolio.style.filter = 'none';
+    menu_portfolio_clicked = true;
 }
 
 function HeaderContact() {
     document.getElementById('content-contact').scrollIntoView();
     HeaderClickResponsive();
+    HeaderFilterOFF();
+    header_menu_contact.style.filter = 'none';
+    menu_contact_clicked = true;
 }
 
 function HeaderClickResponsive() {
