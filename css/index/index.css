@@ -401,58 +401,6 @@ p, i {
     color: #928f97;
 }
 
-.edu-circle1 {
-    top: 45px;
-}
-
-.edu-circle2 {
-    top: 174px;
-}
-
-.career-circle1 {
-    top: 45px;
-}
-
-.career-circle2 {
-    top: 174px;
-}
-
-.career-circle3 {
-    top: 304px;
-}
-
-.ext-circle1 {
-    top: 45px;
-}
-
-.ext-circle2 {
-    top: 174px;
-}
-
-.ext-circle3 {
-    top: 304px;
-}
-
-.ext-circle4 {
-    top: 454px;
-}
-
-.ext-circle5 {
-    top: 604px;
-}
-
-.ext-circle6 {
-    top: 776px;
-}
-
-.ext-circle7 {
-    top: 944px;
-}
-
-.ext-circle8 {
-    top: 1094px;
-}
-
 .content-resume-div {
     border-left: 3px solid #220065;
     padding-left: 36px;
@@ -612,6 +560,10 @@ p, i {
         display: none;
     }
 
+    .content-title {
+        font-size: 42px;
+    }
+
     .content-home-title {
         font-size: 7vw;
         font-weight: bold;
@@ -738,6 +690,18 @@ p, i {
 
     .content-aboutme-profile-description-li b {
         margin-left: 8px;
+    }
+
+    .content-resume-box {
+        display: flex;
+    }
+
+    .content-resume-box > div {
+        width: 50%;
+    }
+
+    .content-resume-box-ext {
+        margin-top: 28px;
     }
 
     .content-des {
