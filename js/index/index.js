@@ -26,10 +26,21 @@ var typingText1 = "한번을 하더라도 완벽하게,";
 var typingText2 = "문제 해결 및 유지 보수를 위한";
 var typingText3 = "공부를 끊임없이 하는 점이 저의 장점입니다!";
 
+var content_home_offset = document.getElementById('content-home').offsetTop;
+var content_aboutme_offset = document.getElementById('content-aboutme').offsetTop;
+var content_resume_offset = document.getElementById('content-resume').offsetTop;
+var content_skill_offset = document.getElementById('content-skill').offsetTop;
+var content_portfolio_offset = document.getElementById('content-portfolio').offsetTop;
+var content_contact_offset = document.getElementById('content-contact').offsetTop;
+
+const content_portfolio_filter = document.querySelector('.content-portfolio-filter');
+const content_portfolio_list = document.querySelector('.content-portfolio-list');
+const content_portfolio_item = document.querySelectorAll('.content-portfolio-item');
+
 wrapper_menu_label.addEventListener('click', WrapperMenuCheckbox);
 wrapper_overlay.addEventListener('click', WrapperOverlayClick);
 window.addEventListener("resize", ResponsiveMenu);
-window.body.addEventListener('scroll', ScrollHeaderMenu);
+window.addEventListener('scroll', ScrollHeaderMenu);
 
 header_menu_home.addEventListener('click', HeaderHome);
 header_menu_aboutme.addEventListener('click', HeaderAboutMe);
@@ -38,48 +49,18 @@ header_menu_skill.addEventListener('click', HeaderSkill);
 header_menu_portfolio.addEventListener('click', HeaderPortFolio);
 header_menu_contact.addEventListener('click', HeaderContact);
 
-header_menu_home.addEventListener('mouseover', function() {
-    header_menu_home.style.filter = 'none';
-});
-header_menu_aboutme.addEventListener('mouseover', function() {
-    header_menu_aboutme.style.filter = 'none';
-});
-header_menu_resume.addEventListener('mouseover', function() {
-    header_menu_resume.style.filter = 'none';
-});
-header_menu_skill.addEventListener('mouseover', function() {
-    header_menu_skill.style.filter = 'none';
-});
-header_menu_portfolio.addEventListener('mouseover', function() {
-    header_menu_portfolio.style.filter = 'none';
-});
-header_menu_contact.addEventListener('mouseover', function() {
-    header_menu_contact.style.filter = 'none';
-});
-
-header_menu_home.addEventListener('mouseout', function() {
-    if (menu_home_clicked == false)
-        header_menu_home.style.filter = 'opacity(50%) saturate(0%)';
-});
-header_menu_aboutme.addEventListener('mouseout', function() {
-    if (menu_aboutme_clicked == false)
-        header_menu_aboutme.style.filter = 'opacity(50%) saturate(0%)';
-});
-header_menu_resume.addEventListener('mouseout', function() {
-    if (menu_resume_clicked == false)
-        header_menu_resume.style.filter = 'opacity(50%) saturate(0%)';
-});
-header_menu_skill.addEventListener('mouseout', function() {
-    if (menu_skill_clicked == false)
-        header_menu_skill.style.filter = 'opacity(50%) saturate(0%)';
-});
-header_menu_portfolio.addEventListener('mouseout', function() {
-    if (menu_portfolio_clicked == false)
-        header_menu_portfolio.style.filter = 'opacity(50%) saturate(0%)';
-});
-header_menu_contact.addEventListener('mouseout', function() {
-    if (menu_contact_clicked == false)
-        header_menu_contact.style.filter = 'opacity(50%) saturate(0%)';
+content_portfolio_filter.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if (filter == null) {
+        return;
+    }
+    content_portfolio_item.forEach((item) => {
+        if (filter === '*' || filter === item.dataset.type) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
 });
 
 wrapper_pageup.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -166,6 +147,33 @@ function ResponsiveMenu() {
 }
 
 function ScrollHeaderMenu() {
+    if (window.scrollY == content_home_offset) {
+        HeaderFilterOFF();
+        header_menu_home.style.filter = 'none';
+        menu_home_clicked = true;
+    } else if (window.scrollY == content_aboutme_offset) {
+        HeaderFilterOFF();
+        header_menu_aboutme.style.filter = 'none';
+        menu_aboutme_clicked = true;
+    } else if (window.scrollY == content_resume_offset) {
+        HeaderFilterOFF();
+        header_menu_resume.style.filter = 'none';
+        menu_resume_clicked = true;
+    } else if (window.scrollY == content_skill_offset) {
+        HeaderFilterOFF();
+        header_menu_skill.style.filter = 'none';
+        menu_skill_clicked = true;
+    } else if (window.scrollY == content_portfolio_offset) {
+        HeaderFilterOFF();
+        header_menu_portfolio.style.filter = 'none';
+        menu_portfolio_clicked = true;
+    } else if (window.scrollY == content_contact_offset) {
+        HeaderFilterOFF();
+        header_menu_contact.style.filter = 'none';
+        menu_contact_clicked = true;
+    } else {
+
+    }
 }
 
 function HeaderClickedOFF() {

@@ -374,10 +374,6 @@ p, i {
     margin-top: 16px;
 }
 
-#content-resume-title {
-    font-size: 24px;
-}
-
 .title-break {
     word-break: break-all;
 }
@@ -394,6 +390,7 @@ p, i {
 
 .content-resume-title {
     font-size: 20px;
+    color: black;
 }
 
 .content-resume-content {
@@ -420,6 +417,10 @@ p, i {
     font-size: 16px;
 }
 
+.content-skill-title {
+    font-weight: 700;
+}
+
 .content-skill-li {
     display: flex;
     align-items: center;
@@ -433,6 +434,39 @@ p, i {
 
 .content-skill-li img:hover {
     transform: scale(1.1);
+}
+
+.content-portfolio-filter {
+    width: 288px;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 24px;
+    background-color: #f5f0ff;
+    margin: 28px auto;
+}
+
+.content-portfolio-filter-item {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.content-portfolio-filter-item:hover {
+    color: #5516c9;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    height: 0px;
+}
+
+.content-portfolio-item {
+    transition-duration: .1s;
+    height: 300px;
+    background-color: #220065;
+    color: white;
+    border-radius: 16px;
 }
 
 .content-contact-box {
