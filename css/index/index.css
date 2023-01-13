@@ -446,6 +446,14 @@ p, i {
     margin: 28px auto;
 }
 
+.content-portfolio-radio {
+    display: none;
+}
+
+.content-portfolio-radio:checked + label {
+    color: #5516c9;
+}
+
 .content-portfolio-filter-item {
     font-size: 20px;
     cursor: pointer;
@@ -455,18 +463,68 @@ p, i {
     color: #5516c9;
 }
 
-.hidden {
-    opacity: 0;
-    pointer-events: none;
-    height: 0px;
+.content-portfolio-list {
+    display: grid;
 }
 
 .content-portfolio-item {
-    transition-duration: .1s;
     height: 300px;
     background-color: #220065;
     color: white;
-    border-radius: 16px;
+    margin: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0px 6px 12px black;
+    cursor: pointer;
+}
+
+.content-portfolio-item:hover {
+    transform: scale(1.025);
+}
+
+.content-portfolio-item-area {
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.content-portfolio-item-textarea * {
+    margin: 4px 0;
+}
+
+.content-portfolio-item-des {
+    font-size: 14px;
+    color: #909090;
+}
+
+.content-portfolio-item-title {
+    color: #220065;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.content-portfolio-item-date {
+    font-size: 14px;
+    color: #5516c9;
+}
+
+.content-portfolio-item-author-img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#portfolio-nfriends {
+    background-image: url('https://picsum.photos/640/360');
 }
 
 .content-contact-box {
@@ -587,9 +645,13 @@ p, i {
         margin-top: 28px;
         margin-bottom: 16px;
     }
+
+    .content-portfolio-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
-@media screen and (min-width: 768px) and (max-width: 959px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
     #header-lastmenu {
         display: none;
     }
@@ -664,9 +726,13 @@ p, i {
         margin: auto;
         margin-top: 28px;
     }
+
+    .content-portfolio-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1200px) {
     .wrapper-m-t-menu {
         display: none;
     }
@@ -746,6 +812,10 @@ p, i {
         font-size: 20px;
         margin-top: 28px;
         margin-bottom: 16px;
+    }
+
+    .content-portfolio-list {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .content-contact-box {

@@ -508,31 +508,50 @@
                     이미지 클릭 시 프로젝트 페이지로 이동합니다.
                 </p>
                 <div class="content-portfolio-filter">
-                    <a class="content-portfolio-filter-item" data-filter="*">
+                    <input type="radio" id="portfolio-radio-all" name="portfolio-radio" class="content-portfolio-radio" checked>
+                    <label for="portfolio-radio-all" id="portfolio-label-all" class="content-portfolio-filter-item" data-filter="*">
                         All
-                    </a>
-                    <a class="content-portfolio-filter-item" data-filter="Web">
+                    </label>
+                    <input type="radio" id="portfolio-radio-web" name="portfolio-radio" class="content-portfolio-radio">
+                    <label for="portfolio-radio-web" id="portfolio-label-web" class="content-portfolio-filter-item" data-filter="Web">
                         Web
-                    </a>
-                    <a class="content-portfolio-filter-item" data-filter="App">
+                    </label>
+                    <input type="radio" id="portfolio-radio-app" name="portfolio-radio" class="content-portfolio-radio">
+                    <label for="portfolio-radio-app" id="portfolio-label-app" class="content-portfolio-filter-item" data-filter="App">
                         App
-                    </a>
-                    <a class="content-portfolio-filter-item" data-filter="Hybrid">
+                    </label>
+                    <input type="radio" id="portfolio-radio-hybrid" name="portfolio-radio" class="content-portfolio-radio">
+                    <label for="portfolio-radio-hybrid" id="portfolio-label-hybrid" class="content-portfolio-filter-item" data-filter="Hybrid">
                         Hybrid
-                    </a>
+                    </label>
                 </div>
                 <div class="content-portfolio-list">
-                    <div class="content-portfolio-item" data-type="Web">
-                        asdf
+                    <div class="content-portfolio-item" id="portfolio-nfriends" data-type="Web">
+                        <div class="content-portfolio-item-area">
+                            <div class="content-portfolio-item-textarea">
+                                <p class="content-portfolio-item-des">
+                                    동네친구 찾는 어플입니다.
+                                </p>
+                                <p class="content-portfolio-item-title">
+                                    동네친구 찾기 어플
+                                </p>
+                                <p class="content-portfolio-item-date">
+                                    2022.09 ~ ing
+                                </p>
+                            </div>
+                            <div class="content-portfolio-item-imgarea">
+                                <img src="./images/icon.jpeg" alt="content-portfolio-item-author-img" class="content-portfolio-item-author-img">
+                            </div>
+                        </div>
                     </div>
                     <div class="content-portfolio-item" data-type="App">
-                        asdfasdf
+                        
                     </div>
                     <div class="content-portfolio-item" data-type="Hybrid">
-                        qwer
+                        
                     </div>
                     <div class="content-portfolio-item" data-type="App">
-                        zxcv
+                        
                     </div>
                 </div>
             </div>

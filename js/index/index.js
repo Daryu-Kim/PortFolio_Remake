@@ -137,7 +137,8 @@ function WrapperOverlayON() {
 }
 
 function ResponsiveMenu() {
-    if (window.innerWidth >= 960) {
+    var temp = window.innerWidth;
+    if (temp >= 1200) {
         WrapperOverlayOFF();
         wrapper_menu_checkbox.checked = false;
         header.style.left = '0';
