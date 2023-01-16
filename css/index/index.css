@@ -54,18 +54,17 @@ p, i {
     bottom: 24px;
     z-index: 100;
     cursor: pointer;
-    width: 42px;
-    height: 42px;
-    background-color: #5516c9;
-    opacity: 0.5;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
+    border-radius: 6px;
 }
 
 .wrapper-pageup i {
-    font-size: 20px;
+    font-size: 18px;
     color: white;
 }
 
@@ -87,7 +86,7 @@ p, i {
     display: block;
     width: 100%;
     height: 3px;
-    background: #5516c9;
+    background: #FFF;
     border-radius: 3px;
 }
 
@@ -128,6 +127,20 @@ p, i {
     left: 0;
     z-index: 999;
     background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.wrapper-overlay-modal {
+    position: fixed;
+    width: 70vw;
+    height: 70vh;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0px 6px 12px black;
+    border-radius: 16px;
     display: none;
 }
 
@@ -521,10 +534,6 @@ p, i {
     height: 48px;
     object-fit: cover;
     border-radius: 50%;
-}
-
-#portfolio-nfriends {
-    background-image: url('https://picsum.photos/640/360');
 }
 
 .content-contact-box {
