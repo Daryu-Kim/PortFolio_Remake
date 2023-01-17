@@ -75,12 +75,6 @@ setTimeout(
         ContentTypingText3();
     }, 3350);
 
-content_portfolio_item.forEach (function (element) {
-    var temp = `https://picsum.photos/${Math.floor(Math.random() * 100) + 640}`;
-    console.log(temp);
-    element.style.backgroundImage = `url(${temp})`;
-})
-
 function WrapperMenuCheckbox() {
     if (wrapper_menu_checkbox.checked === true) {
         header.style.left = '-300px';
