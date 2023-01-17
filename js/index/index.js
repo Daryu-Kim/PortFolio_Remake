@@ -258,6 +258,6 @@ function PortFolioModal(file_name) {
     document.querySelector('.wrapper-overlay-modal-content').remove;
     wrapper_overlay_modal.innerHTML = 
     `
-    <object class="wrapper-overlay-modal-content" width="90%" height="90%;" type="text/html" data="/PortFolio_Remake/html/${file_name}.html"></object>
+    <object class="wrapper-overlay-modal-content" width="90%" height="90%;" type="text/html" data="https://github.com/Daryu-Kim/PortFolio_Remake/blob/6909a0623138f5a1f921f2226e503234b1d9d4d3/html/${file_name}.html"></object>
     `;
 }
