@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .2s ease-in-out;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Pretendard-Regular';
+    word-break: keep-all;
+    scroll-behavior: smooth;
+}
+
+.content-title {
+    text-align: center;
+}
+
+hr {
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.content-sub-title {
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.content-sub-title:first-child {
+    margin-top: 0;
+}
+
+.content-slide {
+    width: 100%;
+    height: 60vw;
+    background-color: #ddd;
+    position: relative;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+.content-slide-controller {
+    height: 100%;
+    position: relative;
+}
+
+.content-slide-controller-left {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.content-slide-controller-right {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.content-slide-controller-radiobox {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}

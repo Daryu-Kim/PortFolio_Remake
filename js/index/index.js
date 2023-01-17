@@ -26,6 +26,9 @@ const content_portfolio_filter = document.querySelector('.content-portfolio-filt
 const content_portfolio_list = document.querySelector('.content-portfolio-list');
 const content_portfolio_item = document.querySelectorAll('.content-portfolio-item');
 
+const portfolio_new = document.querySelector('#portfolio-new');
+const portfolio_old = document.querySelector('#portfolio-old');
+
 // Add Event Listener
 wrapper_menu_label.addEventListener('click', WrapperMenuCheckbox);
 wrapper_overlay.addEventListener('click', WrapperOverlayClick);
@@ -57,6 +60,14 @@ content_portfolio_item.forEach (function (element) {
         WrapperOverlayON();
         wrapper_overlay_modal.style.display = 'block';
     });
+});
+
+portfolio_new.addEventListener('click', function () {
+    PortFolioModal('portfolio_new');
+});
+
+portfolio_old.addEventListener('click', function () {
+    PortFolioModal('portfolio_old');
 });
 
 wrapper_pageup.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -241,4 +252,12 @@ function ContentTypingTextAnim3() {
     } else {
         clearInterval(tyInt3);
     }
+}
+
+function PortFolioModal(file_name) {
+    document.querySelector('.wrapper-overlay-modal-content').remove;
+    wrapper_overlay_modal.innerHTML = 
+    `
+    <object class="wrapper-overlay-modal-content" width="90%" height="90%;" type="text/html" data="../html/${file_name}.html"></object>
+    `;
 }
