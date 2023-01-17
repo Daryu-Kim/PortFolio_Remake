@@ -35,6 +35,33 @@ hr {
     margin-top: 0;
 }
 
+.content-deployment {
+    display: flex;
+}
+
+.content-deployment > a {
+    width: 32px;
+    height: 32px;
+    background-color: black;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.content-deployment > a:last-child {
+    margin-right: 0;
+}
+
+.content-deployment > a:hover {
+    transform: scale(1.05);
+}
+
+.content-deployment i {
+    color: white;
+    line-height: 32px;
+    font-size: 16px;
+}
+
 .content-slide {
     width: 100%;
     height: 60vw;
@@ -42,6 +69,8 @@ hr {
     position: relative;
     padding: 16px;
     border-radius: 4px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .content-slide-controller {
@@ -49,22 +78,27 @@ hr {
     position: relative;
 }
 
-.content-slide-controller-left {
+.content-slide-controller-general {
     font-size: 24px;
     cursor: pointer;
     position: absolute;
-    left: 0;
     top: 50%;
     transform: translateY(-50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.35);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    line-height: 32px;
+    text-align: center;
 }
 
-.content-slide-controller-right {
-    font-size: 24px;
-    cursor: pointer;
-    position: absolute;
+.controller-left {
+    left: 0;
+}
+
+.controller-right {
     right: 0;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 .content-slide-controller-radiobox {
