@@ -2,8 +2,8 @@ const radio1 = document.querySelector('#img1');
 const radio2 = document.querySelector('#img2');
 const radio3 = document.querySelector('#img3');
 
-const left = document.querySelector('.controller-left');
-const right = document.querySelector('.controller-right');
+const left = document.querySelector('#controller-left');
+const right = document.querySelector('#controller-right');
 
 const tag = radio1.value;
 

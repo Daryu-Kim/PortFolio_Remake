@@ -108,15 +108,18 @@ li > p {
     width: 32px;
     height: 32px;
     border-radius: 50%;
+    line-height: 32px;
     text-align: center;
 }
 
-.controller-left {
+#controller-left {
     left: 0;
+    line-height: 32px;
 }
 
-.controller-right {
+#controller-right {
     right: 0;
+    line-height: 32px;
 }
 
 .content-slide-controller-radiobox {
