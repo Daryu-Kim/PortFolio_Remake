@@ -94,8 +94,10 @@ function WrapperMenuCheckbox() {
 function WrapperOverlayClick() {
     WrapperOverlayOFF();
     wrapper_menu_checkbox.checked = false;
-    header.style.left = '-300px';
     wrapper_overlay_modal.style.display = 'none';
+    if (window.innerWidth < 1200) {
+        header.style.left = '-300px';
+    }
 }
 
 function WrapperOverlayOFF() {
@@ -143,10 +145,15 @@ function ResponsiveMenu() {
     var temp = window.innerWidth;
     if (temp >= 1200) {
         WrapperOverlayOFF();
+        wrapper_overlay_modal.style.display = 'none';
         wrapper_menu_checkbox.checked = false;
         header.style.left = '0';
+        wrapper_overlay.style.zIndex = 1001;
+        wrapper_overlay_modal.style.zIndex = 1002;
     } else {
         header.style.left = '-300px';
+        wrapper_overlay.style.zIndex = 998;
+        wrapper_overlay_modal.style.zIndex = 999;
     }
 }
 

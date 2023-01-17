@@ -132,8 +132,6 @@ p, i {
 
 .wrapper-overlay-modal {
     position: fixed;
-    width: 70vw;
-    height: 70vh;
     z-index: 1000;
     top: 50%;
     left: 50%;
@@ -497,6 +495,10 @@ p, i {
     transform: scale(1.025);
 }
 
+#portfolio-new {
+    background-image: url('');
+}
+
 .content-portfolio-item-area {
     width: 100%;
     height: fit-content;
@@ -594,6 +596,11 @@ p, i {
 }
 
 @media screen and (max-width: 767px) {
+    .wrapper-overlay-modal {
+        width: 80vw;
+        height: 80vh;
+    }
+
     #header-lastmenu {
         display: none;
     }
@@ -661,6 +668,11 @@ p, i {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+    .wrapper-overlay-modal {
+        width: 70vw;
+        height: 80vh;
+    }
+
     #header-lastmenu {
         display: none;
     }
@@ -744,6 +756,11 @@ p, i {
 @media screen and (min-width: 1200px) {
     .wrapper-m-t-menu {
         display: none;
+    }
+
+    .wrapper-overlay-modal {
+        width: 720px;
+        height: 80vh;
     }
 
     .content {
