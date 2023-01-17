@@ -306,8 +306,7 @@ p, i {
     align-items: center;
     justify-content: center;
     z-index: 0;
-    /* 문제점 */
-    background-image: url('https://github.com/Daryu-Kim/PortFolio_Remake/blob/main/images/index/content/home/content-home-bg.jfif?raw=true');
+    background-image: url('https://github.com/Daryu-Kim/PortFolio_Remake/blob/main/images/index/content/home/content-home-bg.png?raw=true');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
