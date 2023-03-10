@@ -509,6 +509,10 @@ p, i {
     background-image: url('https://github.com/Daryu-Kim/PortFolio_Remake/blob/main/images/index/content/portfolio/content-portfolio-oldportfolio.png?raw=true');
 }
 
+#portfolio-aio {
+    background-image: url('https://github.com/Daryu-Kim/PortFolio_Remake/blob/main/images/index/content/portfolio/content-portfolio-aio.png?raw=true');
+}
+
 .content-portfolio-item-area {
     width: 100%;
     height: fit-content;
